@@ -1,0 +1,11 @@
+[Unit]
+Description=systemd-service-timer
+Requires=network-online.target
+Wants=systemd-service-timer.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/perl /usr/share/systemd-service-timer/systemd-service-timer.pl
+
+[Install]
+WantedBy=multi-user.target

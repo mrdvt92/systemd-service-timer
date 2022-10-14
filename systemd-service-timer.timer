@@ -1,0 +1,10 @@
+[Unit]
+Description=systemd-service-timer
+Requires=systemd-service-timer.service
+
+[Timer]
+Unit=systemd-service-timer.service
+OnCalendar=*-*-* *:*:00
+
+[Install]
+WantedBy=timers.target
