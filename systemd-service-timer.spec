@@ -31,8 +31,6 @@ cp %{name}.timer         $RPM_BUILD_ROOT/%{_unitdir}/
 systemctl daemon-reload
 systemctl enable  %{name}.service
 systemctl enable  %{name}.timer
-systemctl restart %{name}.service
-systemctl restart %{name}.timer
 
 %files
 %dir %attr(0755,root,root) %{_datadir}/%{name}/
